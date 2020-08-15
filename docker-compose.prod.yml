@@ -1,0 +1,8 @@
+version: '3'
+services:
+  library:
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - '3333:3333'

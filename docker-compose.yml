@@ -1,0 +1,14 @@
+version: '3'
+services:
+  library:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: node_modules/.bin/nodemon --exec yarn dev
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3333:3333
+    volumes:
+     - .:/home/app/library
+     - /home/app/library/node_modules
